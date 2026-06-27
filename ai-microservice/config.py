@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── NewsAPI.org ──────────────────────────────────────────────────────────────
-NEWS_API_KEY: str = os.getenv("NEWS_API_KEY", "")
+NEWS_API_KEY: str = os.getenv("NEWS_API_KEY", "49b6db216c3f4ad29860c1b2d430c7ac")
 NEWS_API_BASE_URL: str = "https://newsapi.org/v2"
 
 # ── Server ───────────────────────────────────────────────────────────────────

@@ -111,7 +111,7 @@ Health check endpoint.
 1. Register at [https://newsapi.org/register](https://newsapi.org/register)
 2. Add your key to `.env`:
    ```
-   NEWS_API_KEY=your_key_here
+   NEWS_API_KEY=49b6db216c3f4ad29860c1b2d430c7ac
    ```
 
 > Without a key, the service automatically falls back to web scraping (Google News RSS + Yahoo Finance).
