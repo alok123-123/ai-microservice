@@ -43,6 +43,11 @@ cron.schedule('0 0 * * *', async () => {
 
           await sentimentRecord.save();
           console.log(`✅ Saved daily sentiment for ${stock.ticker}`);
+
+          // Trigger alert checking
+          if (stock.sentimentAlertThreshold !== null && stock.sentimentAlertThreshold !== undefined && avgScore < stock.sentimentAlertThreshold) {
+            console.log(`🚨 ALERT: Ticker ${stock.ticker} sentiment (${avgScore.toFixed(4)}) has fallen below threshold (${stock.sentimentAlertThreshold})!`);
+          }
         } else {
           console.log(`⚠️ No articles found for ${stock.ticker}`);
         }
